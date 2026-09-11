@@ -1,0 +1,11 @@
+check,count
+Total transaksi (header),20468
+Total step (detail),82471
+Transaksi status OPEN (belum selesai),23
+Transaksi dengan step timestamp kosong,24
+Transaksi CLOSE tapi flow tidak lengkap (anomali),2
+Transaksi netto <= 0,25
+Transaksi dikecualikan dari cycle time calc (OPEN/incomplete),25
+Transaksi valid untuk cycle time calc,20443
+Step dengan durasi negatif (dikoreksi ke 0),2
+"Transaksi outlier cycle time >24 jam (excluded dr statistik, tetap disimpan)",25
