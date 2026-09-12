@@ -1,6 +1,6 @@
 # Analisis Mobilisasi Kendaraan per Kategori (kode_flow)
 
-Dashboard gabungan untuk 4 kategori: FG, MOL, PO Inventory, SPTA — plus halaman perbandingan.
+Analisi Mobilisasi untuk 4 kategori: FG, MOL, PO Inventory, SPTA dan halaman perbandingan.
 
 ## Cara Menjalankan
 
@@ -49,31 +49,6 @@ Berbeda dari dashboard versi sebelumnya (`app.py`, yang mengelompokkan berdasark
 dan PO Inventory ditampilkan sebagai kategori yang benar-benar terpisah, sesuai revisi kebutuhan
 user (keduanya kebetulan memakai jalur fisik yang identik tapi punya arti bisnis berbeda: SPTA
 = tebu masuk, PO Inventory = barang keluar gudang).
-
-## Background Foto Pabrik (Terbaru)
-
-Latar belakang dashboard sekarang memakai foto udara pabrik (`assets/factory_bg.jpg`):
-- Halaman utama: foto diterapkan dengan overlay putih transparan supaya kartu, tabel, dan grafik tetap mudah dibaca.
-- Banner header di setiap halaman: foto lebih terlihat, dipadukan gradasi warna kategori + bayangan teks
-  supaya judul putih tetap kontras.
-
-Foto asli (1,28 MB) sudah dikompres jadi JPEG (~100 KB) supaya dashboard tetap ringan dimuat.
-Kalau ingin ganti foto lain, tinggal timpa file `assets/factory_bg.jpg` dengan nama file yang sama.
-
-## Versi Visual Profesional
-
-`app_kategori.py` sudah dirombak jadi lebih interaktif & profesional dibanding versi sebelumnya
-(`app_kategori_v1_backup.py`, disimpan sebagai cadangan):
-
-- **Header banner** bergradasi warna sesuai kategori
-- **Kartu statistik custom** dengan efek hover, bukan `st.metric` polos
-- **Filter Periode** di sidebar (7 hari/30 hari/semua/pilih sendiri) — berlaku ke seluruh dashboard
-- **Gauge chart** di tiap halaman kategori — langsung menunjukkan apakah kategori itu lebih cepat/lambat dari rata-rata seluruh kategori
-- **Radar chart** di halaman Perbandingan — profil "Kecepatan vs Konsistensi vs Kepercayaan Data" tiap kategori dalam satu visual
-- Skema warna konsisten per kategori di semua grafik
-
-Semua kotak "Apa yang dapat dilihat / Apa artinya / Batasan" dari versi sebelumnya tetap
-dipertahankan — perombakan ini murni visual & interaktivitas, bukan mengubah isi analisis.
 
 
 | Kategori | Transaksi | Kendaraan Unik |
